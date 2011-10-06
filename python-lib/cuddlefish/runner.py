@@ -130,6 +130,7 @@ class RemoteFennecRunner(mozrunner.Runner):
                             "ADB executable.")
         self.binary = binary
 
+        kwargs['binary'] = binary
         mozrunner.Runner.__init__(self, **kwargs)
         mobile_app_name = self.cmdargs[0]
         self.cmdargs = []
